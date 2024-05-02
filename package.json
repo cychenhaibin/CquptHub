@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "element-plus": "^2.7.2",
+    "lib-flexible": "^0.3.2",
     "swiper": "^6.8.4",
     "vue": "^3.4.21",
     "vue-router": "^4.3.2"

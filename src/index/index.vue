@@ -12,14 +12,24 @@
            class="menu flex align-items"
           :offset="30"
         >
-          <el-anchor-link class="menuLi" href="#part1" title="小游戏" />
-          <el-anchor-link class="menuLi" href="#part2" title="可交互图像" />
-          <el-anchor-link class="menuLi" href="#part3" title="工程模型" />
-          <el-anchor-link class="menuLi" href="#part4" title="网页托管" />
+          <div class="menuLi" @click="point('part1')"   href="" title="小游戏" >
+            <el-anchor-link style=" pointer-events: none;" class="menuLi" @click="point('part1')"   href="#part1" title="小游戏" />
+
+          </div>
+          <div class="menuLi" @click="point('part2')"   href="" title="可交互图像" >
+            <el-anchor-link style=" pointer-events: none;" class="menuLi" @click="point('part2')" href="#part2"  title="可交互图像" />
+          </div>
+          <div class="menuLi" @click="point('part3')"   href="" title="工程模型" >
+            <el-anchor-link style=" pointer-events: none;" class="menuLi"  @click="point('part3')" href="#part3"  title="工程模型" />
+          </div>
+          <div class="menuLi" @click="point('part4')"   href="" title="网页托管" >
+            <el-anchor-link style=" pointer-events: none;" class="menuLi"  @click="point('part4')" href="#part4"  title="网页托管" />
+          </div>
+
         </el-anchor>
       </div>
     </el-affix>
-    
+
     <!-- 首屏 -->
     <div class="index">
       <img class="ball" src="../assets/Ellipse 63@1x.png" alt="">
@@ -431,6 +441,20 @@ export default {
 import { onMounted } from "vue"
 import 'swiper/swiper-bundle.css';
 import Swiper from "swiper";
+const point=(point:any)=> {
+  console.log(point)
+
+  const  pointEl:any=  document.querySelector(
+      "#" + point)
+   //需要定位的点=
+  console.log(pointEl)
+  if (pointEl) {
+
+    pointEl.scrollIntoView()
+  }
+
+}
+
 const initSwiper = () => {
   new Swiper('.swiper-container', {
     slidesPerView: 'auto',
@@ -485,6 +509,9 @@ onMounted(() => {
 }
 
 .container{
+  min-width: 1500px;
+  max-width: 2500px;
+  margin:0 auto;
   .title{
     padding: 24px 92px;
     height: 30px;
@@ -778,4 +805,5 @@ onMounted(() => {
     }
   }
 }
+
 </style>
