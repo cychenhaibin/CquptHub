@@ -1,10 +1,12 @@
 <template>
-  <div class="container">
+  <div class="container"  >
     <el-affix :offset="0">
       <div class="title flex align-items space-between">
         <div class="logoRegion flex align-items">
           <img class="logo" src="../assets/组件 4@1x.png" alt="">
           <div class="name">CQUPT HUB</div>
+
+
         </div>
         <el-anchor
           direction="horizontal"
@@ -116,70 +118,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide flex">
-              <div class="leftAnnotation">
-                <div class="annotTop">
-                  <div>关于设置</div>
-                  <div class="line"></div>
-                </div>
-                <div class="annotBot">
-                  <div>玩家输入代码, 控制小球进入篮筐</div>
-                  <div class="line"></div>
-                </div>
-              </div>
-              <img class="contentImg" src="../assets/type1.webp" alt="">
-              <div class="rightAnnotation">
-                <div class="annotCenter">
-                  <div style="text-align: right;">玩家可实时查看小球移动情况</div>
-                  <div class="line"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide flex">
-              <div class="leftAnnotation">
-                <div class="annotTop">
-                  <div>关于设置</div>
-                  <div class="line"></div>
-                </div>
-                <div class="annotBot">
-                  <div>玩家输入代码, 控制小球进入篮筐</div>
-                  <div class="line"></div>
-                </div>
-              </div>
-              <img class="contentImg" src="../assets/type1.webp" alt="">
-              <div class="rightAnnotation">
-                <div class="annotCenter">
-                  <div style="text-align: right;">玩家可实时查看小球移动情况</div>
-                  <div class="line"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide flex">
-              <div class="leftAnnotation">
-                <div class="annotTop">
-                  <div>关于设置</div>
-                  <div class="line"></div>
-                </div>
-                <div class="annotBot">
-                  <div>玩家输入代码, 控制小球进入篮筐</div>
-                  <div class="line"></div>
-                </div>
-              </div>
-              <img class="contentImg" src="../assets/type1.webp" alt="">
-              <div class="rightAnnotation">
-                <div class="annotCenter">
-                  <div style="text-align: right;">玩家可实时查看小球移动情况</div>
-                  <div class="line"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination" style="top: 400px; left: -200px;"></div>
+          <!--<div class="swiper-pagination" style="top: 400px; left: -200px;"></div>-->
         </div>
       </div>
       <div class="program backgroundImg positionLeft">
@@ -254,8 +193,12 @@
       <div class="program backgroundImg positionRig" style="height: 650px; overflow: hidden;">
         <div class="typeTitle flex space-between">
           <div>函数可视化</div>
-          <div style="width: 140px; height: 40px; line-height: 40px; border-radius: 45px; color: white; background-color: #0DC3B6; text-align: center; font-size: 14px; cursor: pointer;">去试玩</div>
-        </div>
+          <a href="https://cqupthub.codeghub.com/project/math/csfc/
+">
+            <button style="width: 140px; height: 40px; line-height: 40px; border-radius: 45px; color: white; background-color: #0DC3B6; text-align: center; font-size: 14px; cursor: pointer; border: none;">去试玩</button>
+
+          </a>
+           </div>
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide flex">
@@ -364,10 +307,7 @@
             <img src="../assets/Rectangle 1049@1x (1).webp" alt="">
             <div class="modelText">通过鼠标移动组件到对应位置，学习棘轮的机械结构</div>
           </div>
-          <div class="modelContent swiper-slide flex align-items">
-            <img src="../assets/Rectangle 1048@1x (1).webp" alt="">
-            <div class="modelText">完成棘轮的组装后，棘轮开始转动，可以观察棘轮的运作状态</div>
-          </div>
+
         </div>
       </div>
       <div class="swiper-container">
@@ -463,19 +403,20 @@ const initSwiper = () => {
   });
 }
 
-const verticalSwiper = () => {
-  new Swiper('.mySwiper', {
-    direction: "vertical",
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-}
+// const verticalSwiper = () => {
+//   new Swiper('.mySwiper', {
+//     direction: "vertical",
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//   });
+// }
 
 onMounted(() => {
   initSwiper()
-  verticalSwiper()
+  // verticalSwiper()
+
 })
 </script>
 
