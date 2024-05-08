@@ -1,0 +1,345 @@
+.el-backtop{
+  background:none!important;
+  border: 3px solid #0DC3B6;
+  background-image: url("../assets/backtop.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: 50% 50% !important;
+  background-position: center !important;
+
+}
+.el-backtop__icon{
+  font-size: 0!important;
+
+}
+.flex{
+  display: flex;
+}
+.align-items{
+  align-items: center;
+}
+.align-end{
+  align-items: end;
+}
+.space-between{
+  justify-content: space-between;
+}
+.justify-center{
+  justify-content: center;
+}
+:deep(.el-anchor__link.is-active){
+  color: #09968C;
+}
+:deep(.el-anchor__link){
+  font-size: 20px;
+}
+:deep(.el-anchor__marker){
+  background-color: #09968C;
+}
+.swiper-container{
+  width: 100%;
+}
+
+.container{
+  min-width: 1500px;
+  max-width: 2500px;
+  margin:0 auto;
+  .title{
+    padding: 24px 92px;
+    height: 30px;
+    background-color: white;
+    .logoRegion{
+      .name{
+        color: #34CAC0;
+        font-weight: bold;
+        font-size: 22px;
+        margin-left: 24px;
+    }
+  }
+    .menu{
+      color: #0F201E;
+      font-size: 20px;
+      display: block;
+      .menuLi{
+        margin-left: 57px;
+    }
+  }
+}
+  .index{
+    width: 100%;
+    height: calc(70vh - 50px);
+    position: relative;
+    overflow: hidden;
+    .indexImg{
+      width: 178px;
+      height: 178px;
+      margin-right: 12px;
+      cursor: pointer;
+  }
+    .ball{
+      position: absolute;
+      width: 90vw;
+      right: -40%;
+  }
+    .mainTop{
+      position: absolute;
+      left: 100px;
+      top: 195px;
+      color: #033531;
+      font-size: 64px;
+      font-weight: 400;
+      .topImg{
+        margin-top: 44px;
+        z-index: 99;
+    }
+  }
+    .mainBot{
+      position: absolute;
+      bottom: 134px;
+      right: 97px;
+      color: #033531;
+      font-size: 64px;
+      font-weight: 400;
+      text-align: right;
+      .botImg{
+        margin-bottom: 53px;
+    }
+  }
+}
+  .miniGames{
+    display: flex;
+    padding-top: 104px;
+    overflow: hidden;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .gamesRegion{
+      padding: 0 200px;
+      .gamesTitle{
+        color: #033531;
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+      .gamesContent{
+        font-size: 16px;
+        font-weight: 250;
+        color: #033531;
+        line-height: 30px;
+    }
+  }
+    .ganmesImg{
+      margin-top: 100px;
+      margin-left: 15%;
+      .hostWidth{
+        width: 557px !important;
+        height: 452px !important;
+    }
+      .gameHref{
+        position: relative;
+        width: 366px;
+        height: 452px;
+        margin-right: 20px;
+        text-decoration: none;
+        transition: transform 0.3s; /* 添加过渡效果 */
+        &:hover {
+          transform: scale(1.1); /* 悬浮时变大 */
+          position: relative;
+          z-index: 999;
+
+          .arrow {
+            /* Ellipse 64 */
+
+            position: absolute;
+            left: 33px;
+            bottom: 54px;
+            width: 73px;
+            height: 73px;
+            opacity: 1;
+
+            background: rgba(255, 255, 255, 0.2);
+
+            box-sizing: border-box;
+            //border: 2px solid #FFFFFF;
+            border-radius: 50%;
+            z-index: 9999;
+        }
+      }
+        .gameImg{
+          width: 366px;
+          height: 452px;
+
+        }
+
+
+        .gameName{
+          position: absolute;
+          top: 34px;
+          left: 33px;
+          font-size: 20px;
+          font-weight: 400;
+          color: white;
+          text-decoration: none;
+          z-index: 9999;
+      }
+        .arrow{
+          position: absolute;
+          left: 33px;
+          bottom: 54px;
+          z-index: 9999;
+      }
+        &:last-child{
+          margin-right: 200px;
+      }
+    }
+      .mindMap{
+        width: 700px;
+        color: #033531;
+        margin-right: 170px;
+        .mindTitle{
+          font-size: 18px;
+          font-weight: bold;
+      }
+        .mindTips{
+          font-size: 16px;
+          font-weight: 400;
+          margin: 10px 0
+      }
+    }
+  }
+    .backgroundImg{
+      background-image: url('../assets/Ellipse 63@1x.webp');
+      background-repeat: no-repeat;
+  }
+    .positionLeft{
+      background-position: -800px 20px;
+  }
+    .positionRig{
+      background-position: 1200px -300px;
+  }
+    .positionBot{
+      background-position: -800px 540px;
+  }
+    .program{
+      position: relative;
+      padding: 183px 200px 0;
+      color: #033531;
+      .typeTitle{
+        width: 1200px;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 69px;
+    }
+      .triangle{
+        width: 700px;
+        text-align: center;
+        margin-right: 84px;
+    }
+      .banner{
+        margin-right: 200px;
+        position: relative;
+        .bgc{
+          height: 507px;
+          position: relative;
+          z-index: 98;
+      }
+        .bannerLeft{
+          font-size: 12px;
+          position: absolute;
+          .bar{
+            position: absolute;
+            z-index: 99;
+            img{
+              width: 120px;
+              height: 120px;
+          }
+            div{
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+          }
+        }
+          .bannerImg{
+            position: absolute;
+            top: -255px;
+            left: 46px;
+            width: 438px;
+            height: 310px;
+        }
+      }
+    }
+      .typeContent{
+        .typeTips{
+          width: 300px;
+          margin: 0 41px 0 38px;
+          .programTitle{
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+      }
+    }
+      .swiper{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #033531;
+        font-weight: 250;
+        .annotTop, .annotCenter, .annotBot{
+          width: 191px;
+      }
+        .annotTop{
+          margin-top: 150px;
+      }
+        .annotBot{
+          margin-top: 200px;
+      }
+        .annotCenter{
+          margin-top: 180px;
+      }
+        .line{
+          width: 191px;
+          height: 4px;
+          margin-top: 10px;
+          background-color: #09968C;
+      }
+        .leftAnnotation, .rightAnnotation{
+          height: 465px;
+      }
+        .contentImg{
+          width: 658px;
+          height: 465px;
+      }
+    }
+      .piano{
+        width: 1077px;
+        height: 731px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+  }
+    .modelTitle{
+      font-size: 24px;
+      font-weight: 400;
+      margin: 183px 200px 0;
+  }
+    .modelContent{
+      width: 900px;
+      margin-right: 80px;
+      img{
+        width: 658px;
+        height: 465px;
+    }
+      .modelText{
+        width: 197px;
+        margin-left: 35px;
+        color: #033531
+    }
+      &:last-child{
+        margin-right: 200px;
+    }
+  }
+}
+}

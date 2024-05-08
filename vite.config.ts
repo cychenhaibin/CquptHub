@@ -5,6 +5,9 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   base: './', // 这里更改打包相对绝对路径
   plugins: [vue()],
+  server: {				// ← ← ← ← ← ←
+    host: '0.0.0.0'	// ← 新增内容 ←
+  }
 })
 
 
