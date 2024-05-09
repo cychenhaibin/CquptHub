@@ -1,3 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.el-anchor__marker{
+  background-color: #0DC3B6!important;
+}
+.el-anchor__link.is-active{
+  color: #0DC3B6!important;
+}
+
+.box-btn{
+  position: absolute;
+  right: 15%;
+  transition: .3s;
+}
+.box-btn:hover{
+  color: #0fc3b6!important;
+  border: 1px solid #0fc3b6!important;
+  background-color: #FFFFFF!important;
+}
+
+
+
 .el-backtop{
   background:none!important;
   border: 3px solid #0DC3B6;
@@ -53,20 +79,21 @@
         font-weight: bold;
         font-size: 22px;
         margin-left: 24px;
+      }
     }
-  }
     .menu{
       color: #0F201E;
       font-size: 20px;
       display: block;
       .menuLi{
-        margin-left: 57px;
+        margin-left: 20px;
+
+      }
     }
   }
-}
   .index{
     width: 100%;
-    height: calc(70vh - 50px);
+    height: calc(100vh - 78px);
     position: relative;
     overflow: hidden;
     .indexImg{
@@ -74,12 +101,12 @@
       height: 178px;
       margin-right: 12px;
       cursor: pointer;
-  }
+    }
     .ball{
       position: absolute;
       width: 90vw;
       right: -40%;
-  }
+    }
     .mainTop{
       position: absolute;
       left: 100px;
@@ -90,8 +117,8 @@
       .topImg{
         margin-top: 44px;
         z-index: 99;
+      }
     }
-  }
     .mainBot{
       position: absolute;
       bottom: 134px;
@@ -102,9 +129,9 @@
       text-align: right;
       .botImg{
         margin-bottom: 53px;
+      }
     }
   }
-}
   .miniGames{
     display: flex;
     padding-top: 104px;
@@ -121,21 +148,21 @@
         font-weight: 400;
         text-align: center;
         margin-bottom: 20px;
-    }
+      }
       .gamesContent{
         font-size: 16px;
         font-weight: 250;
         color: #033531;
         line-height: 30px;
+      }
     }
-  }
     .ganmesImg{
       margin-top: 100px;
       margin-left: 15%;
       .hostWidth{
         width: 557px !important;
         height: 452px !important;
-    }
+      }
       .gameHref{
         position: relative;
         width: 366px;
@@ -164,8 +191,8 @@
             //border: 2px solid #FFFFFF;
             border-radius: 50%;
             z-index: 9999;
+          }
         }
-      }
         .gameImg{
           width: 366px;
           height: 452px;
@@ -182,17 +209,17 @@
           color: white;
           text-decoration: none;
           z-index: 9999;
-      }
+        }
         .arrow{
           position: absolute;
           left: 33px;
           bottom: 54px;
           z-index: 9999;
-      }
+        }
         &:last-child{
           margin-right: 200px;
+        }
       }
-    }
       .mindMap{
         width: 700px;
         color: #033531;
@@ -200,27 +227,27 @@
         .mindTitle{
           font-size: 18px;
           font-weight: bold;
-      }
+        }
         .mindTips{
           font-size: 16px;
           font-weight: 400;
           margin: 10px 0
+        }
       }
     }
-  }
     .backgroundImg{
       background-image: url('../assets/Ellipse 63@1x.webp');
       background-repeat: no-repeat;
-  }
+    }
     .positionLeft{
       background-position: -800px 20px;
-  }
+    }
     .positionRig{
       background-position: 1200px -300px;
-  }
+    }
     .positionBot{
       background-position: -800px 540px;
-  }
+    }
     .program{
       position: relative;
       padding: 183px 200px 0;
@@ -230,12 +257,12 @@
         font-size: 24px;
         font-weight: 400;
         margin-bottom: 69px;
-    }
+      }
       .triangle{
         width: 700px;
         text-align: center;
         margin-right: 84px;
-    }
+      }
       .banner{
         margin-right: 200px;
         position: relative;
@@ -243,7 +270,7 @@
           height: 507px;
           position: relative;
           z-index: 98;
-      }
+        }
         .bannerLeft{
           font-size: 12px;
           position: absolute;
@@ -253,23 +280,23 @@
             img{
               width: 120px;
               height: 120px;
-          }
+            }
             div{
               position: absolute;
               top: 50%;
               left: 50%;
               transform: translate(-50%, -50%);
+            }
           }
-        }
           .bannerImg{
             position: absolute;
             top: -255px;
             left: 46px;
             width: 438px;
             height: 310px;
+          }
         }
       }
-    }
       .typeContent{
         .typeTips{
           width: 300px;
@@ -277,9 +304,9 @@
           .programTitle{
             font-size: 18px;
             margin-bottom: 20px;
+          }
         }
       }
-    }
       .swiper{
         position: absolute;
         left: 50%;
@@ -288,58 +315,86 @@
         font-weight: 250;
         .annotTop, .annotCenter, .annotBot{
           width: 191px;
-      }
+        }
         .annotTop{
           margin-top: 150px;
-      }
+        }
         .annotBot{
           margin-top: 200px;
-      }
+        }
         .annotCenter{
           margin-top: 180px;
-      }
+        }
         .line{
           width: 191px;
           height: 4px;
           margin-top: 10px;
           background-color: #09968C;
-      }
+        }
         .leftAnnotation, .rightAnnotation{
           height: 465px;
-      }
+        }
         .contentImg{
           width: 658px;
           height: 465px;
+        }
       }
-    }
       .piano{
         width: 1077px;
-        height: 731px;
+        height: 100%;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
+      }
     }
-  }
     .modelTitle{
       font-size: 24px;
       font-weight: 400;
       margin: 183px 200px 0;
-  }
+    }
     .modelContent{
       width: 900px;
       margin-right: 80px;
       img{
         width: 658px;
         height: 465px;
-    }
+      }
       .modelText{
         width: 197px;
         margin-left: 35px;
         color: #033531
-    }
+      }
       &:last-child{
         margin-right: 200px;
+      }
     }
   }
 }
+// 美化滚动条
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  width: 6px;
+  background: rgba(#101f1c, 0.1);
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(144, 147, 153, 0.5);
+  background-clip: padding-box;
+  min-height: 28px;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(144, 147, 153, 0.3);
 }

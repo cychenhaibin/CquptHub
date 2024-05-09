@@ -1,6 +1,5 @@
-
 <template>
-  <div class="container">
+  <div class="container" :style="{'zoom':isOpenZoom ? '0.9' : ''}">
 
     <el-affix :offset="0">
       <div class="title flex align-items space-between">
@@ -40,7 +39,7 @@
       </div>
     </el-affix>
     <!-- 首屏 -->
-    <div class="index">
+    <div class="index" :style="{'height':isAddMobileStyleStatus ? 800 +'px' : 'calc(100vh)' }">
       <img class="ball" src="../assets/Ellipse 63@1x.png" alt="">
       <div class="mainTop">
         <div class="description">
@@ -80,9 +79,9 @@
 
     <!-- 网页托管 -->
     <partFour/>
-    <el-backtop :right="70" :bottom="200" style="width: 50px;height: 50px"/>
+    <el-backtop :right="70" :bottom="100" style="width: 50px;height: 50px"/>
 
-    <div class="left-display">
+    <div class="left-display" v-show="hideScollerStatus">
       <div class="left-slider">
         <div class="left-slider-btn" :style="{'height':needScrollHeight+'px'}"></div>
       </div>
@@ -107,10 +106,9 @@
 
 
 <script lang="ts" setup>
-
-import {onMounted, ref, onBeforeUnmount, watch} from "vue"
+import {onMounted, ref, onBeforeUnmount, watch, onUnmounted} from "vue"
 import 'swiper/swiper-bundle.css';
-import partOwn from "/src/comments/part1.vue"
+import partOwn from "../comments/part1.vue"
 import partTow from "../comments/part2.vue"
 import partThree from "../comments/part3.vue"
 import partFour from "../comments/part4.vue"
@@ -150,17 +148,23 @@ const backTop = () => {
   TopEl.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});  // 开启平滑滚动动画
 }
 
-// const verticalSwiper = () => {
-//   new Swiper('.mySwiper', {
-//     direction: "vertical",
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-//   });
-// }
 
-const isAddHeaderStyleStatus = ref(false)
+
+const isOpenZoom = ref(false)
+
+const resize = () => {
+  const ratioX = window.innerWidth ;
+  const ratioY = window.innerHeight ;
+  if(ratioX < 1570 && ratioY < 740) {
+    isOpenZoom.value = true
+  }
+};
+
+
+
+const isAddMobileStyleStatus = ref(false)
+
+const hideScollerStatus = ref(false)
 
 const scrollDistance = ref(0); // 创建响应式数据
 
@@ -172,6 +176,9 @@ const handleScroll = () => {
 };
 
 
+onUnmounted(() => {
+  window.removeEventListener('resize', resize);
+})
 
 onBeforeUnmount(() => {
   // 在组件销毁之前移除滚动事件监听器，以防止内存泄漏
@@ -183,11 +190,13 @@ watch(scrollDistance, (newValue) => {
   if (newValue >= 779 && newValue <= 1136) {
     // 编程类
     needScrollHeight.value = 50; // 这是一个示例值
-
-  }else if (newValue < 779){
+    hideScollerStatus.value = true
+  }else if (newValue < 1000){
     needScrollHeight.value = 0;
+    hideScollerStatus.value = false
   }
   else if (newValue > 1432 && newValue <= 2004) {
+    hideScollerStatus.value = true
     // 益智类
     needScrollHeight.value = 100; // 这是另一个示例值
   } else if (newValue > 2112 && newValue <= 2784) {
@@ -196,12 +205,28 @@ watch(scrollDistance, (newValue) => {
   } else if (newValue > 2894 && newValue <= 3670) {
     // 黄金分割比
     needScrollHeight.value = 200; // 这是示例值
-  } else if (newValue > 3670) {
-    // 超出范围的默认值
-    needScrollHeight.value = 200; // 默认值
+  } else if (newValue > 3800) {
+    hideScollerStatus.value = false
+  }else {
+    hideScollerStatus.value = true
   }
 });
+
+const _isMobile = () => {
+  let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+  return flag;
+}
+
 onMounted(() => {
+
+  resize();
+  window.addEventListener('resize', resize);
+  const isMobile = _isMobile();
+  if (isMobile) {
+    isAddMobileStyleStatus.value = true
+  }else {
+    isAddMobileStyleStatus.value = false
+  }
   // 添加滚动事件监听器
   window.addEventListener('scroll', handleScroll);
   initSwiper()
@@ -211,6 +236,13 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
+
+.moveIndex {
+  width: 100%;
+  height: calc(800px);
+  position: relative;
+  overflow: hidden;
+}
 .backTop {
   cursor: pointer;
   position: fixed;

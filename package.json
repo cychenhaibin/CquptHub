@@ -5,13 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview",
-    "build": "vite build --mode production"
+    "build": "vite build --mode production",
+    "preview": "vite preview"
   },
   "dependencies": {
     "element-plus": "^2.7.2",
     "lib-flexible": "^0.3.2",
+    "lib-flexible-computer": "^1.0.2",
     "swiper": "^6.8.4",
     "vue": "^3.4.21",
     "vue-router": "^4.3.2"

@@ -37,7 +37,7 @@
         </a>
       </div>
     </div>
-    <div class="program backgroundImg positionRig" style="height: 650px; overflow: hidden;">
+    <div class="program backgroundImg positionRig" style="height: 650px; ">
       <div class="typeTitle flex space-between">
         <div>函数可视化</div>
         <a href="https://cqupthub.codeghub.com/project/math/csfc/

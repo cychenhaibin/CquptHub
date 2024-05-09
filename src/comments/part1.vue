@@ -33,7 +33,7 @@
         </a>
       </div>
     </div>
-    <div class="program backgroundImg positionRig" style="height: 650px; overflow: hidden;">
+    <div class="program backgroundImg positionRig" style="height: 650px; ">
       <div class="typeTitle">编程类</div>
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -71,6 +71,7 @@
       </div>
     </div>
     <div class="program">
+
       <div class="typeContent flex align-items justify-center">
         <div class="typeTips">
           <div class="programTitle">黄金分割比</div>
@@ -80,6 +81,7 @@
       </div>
     </div>
     <div class="program backgroundImg positionBot">
+      <div class="typeTitle">闯关理财师</div>
       <div class="typeContent flex align-items justify-center">
         <img src="../assets/type4.webp" alt="">
         <div class="typeTips">

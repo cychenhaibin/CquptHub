@@ -6,17 +6,17 @@
     </div>
     <div class="swiper-container">
       <div class="swiper-wrapper ganmesImg flex">
-        <a class="gameHref swiper-slide" href="https://cqupthub.codeghub.com/project/art/piano/" target="_blank">
+        <a class="gameHref swiper-slide" href="https://cqupthub.codeghub.com/project/art/piano/">
           <div class="gameName">电子钢琴</div>
           <img class="gameImg" src="../assets/Rectangle 1039@1x (1).webp" alt="">
           <img class="arrow" src="../assets/组件 6@1x.png" alt="">
         </a>
-        <a class="gameHref swiper-slide" href="https://cqupthub.codeghub.com/project/engineering/ratchet/" target="_blank">
+        <a class="gameHref swiper-slide" href="https://cqupthub.codeghub.com/project/engineering/ratchet/">
           <div class="gameName">齿轮模型</div>
           <img class="gameImg" src="../assets/jinlun.png" alt="">
           <img class="arrow" src="../assets/组件 6@1x.png" alt="">
         </a>
-        <a class="gameHref swiper-slide" href="https://cqupthub.codeghub.com/project/game/cube/" target="_blank">
+        <a class="gameHref swiper-slide" href="https://cqupthub.codeghub.com/project/game/cube/">
           <div class="gameName">魔方</div>
           <img class="gameImg" src="../assets/cube.png" alt="">
           <img class="arrow" src="../assets/组件 6@1x.png" alt="">
@@ -24,7 +24,7 @@
 
       </div>
     </div>
-    <div class="program backgroundImg positionRig" style="height: 650px; overflow: hidden;">
+    <div class="program backgroundImg positionRig" style="height: auto;">
       <div class="typeTitle flex align-end">
         <div>电子钢琴</div>
         <div style="color: #033531; font-size: 14px; margin-left: 10px;">你的互联网钢琴替身</div>

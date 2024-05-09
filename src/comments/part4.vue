@@ -33,7 +33,7 @@ https://cqupthub.codeghub.com/project/art/env-design/unit-4/task-4/
         </div>
       </div>
     </div>
-    <div class="program backgroundImg positionRig" style="height: 650px; overflow: hidden; margin-bottom: 100px;">
+    <div class="program backgroundImg positionRig" style="height: 650px;  margin-bottom: 100px;">
       <div class="typeTitle flex align-end">
         <div>苗绣记忆</div>
         <div style="color: #033531; font-size: 14px; margin-left: 10px;">一起来感受非遗文化的魅力</div>
